@@ -1,0 +1,25 @@
+USE DATABASE ANIME_DB;
+USE SCHEMA MART;
+
+CREATE OR REPLACE PROCEDURE SP_RUN_MART_PIPELINE()
+RETURNS STRING
+LANGUAGE SQL
+AS
+$$
+DECLARE
+    v_result STRING;
+BEGIN
+
+    -- Load dimensions
+    CALL SP_LOAD_DIM_ANIME();
+    CALL SP_LOAD_DIM_GENRE();
+
+    -- Load fact table
+    CALL SP_LOAD_FACT_ANIME_RANKINGS();
+
+    v_result := 'MART pipeline executed successfully: DIM_ANIME, DIM_GENRE, FACT_ANIME_RANKINGS refreshed';
+
+    RETURN v_result;
+
+END;
+$$;
