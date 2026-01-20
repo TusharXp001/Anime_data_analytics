@@ -1,4 +1,4 @@
-USE DATABASE ANIME_DWH;
+USE DATABASE ANIME_DB;
 USE SCHEMA MART;
 
 -- =========================
