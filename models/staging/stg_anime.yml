@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_anime
+    description: "Cleaned anime staging table"
+    columns:
+      - name: anime_id
+        tests:
+          - not_null
+          - unique
+
+      - name: ranking
+        tests:
+          - not_null
+
+  - name: stg_anime_genres
+    description: "Normalized anime genres"
+    columns:
+      - name: anime_id
+        tests:
+          - not_null
+
+      - name: genre
+        tests:
+          - not_null

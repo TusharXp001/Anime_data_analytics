@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw
+    database: ANIME_DB
+    schema: RAW
+    tables:
+      - name: raw_anime
+        description: "Raw anime data ingested from RapidAPI anime-db endpoint"

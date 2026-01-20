@@ -19,3 +19,10 @@ Thumbs.db
 
 # Power BI temp
 *.pbix.tmp
+
+# Default .gitignore content added by dbt Cloud# you shouldn't commit these into source control
+# these are the default directory names, adjust/add to fit your needs
+target/
+dbt_packages/
+logs/
+# end dbt Cloud content
