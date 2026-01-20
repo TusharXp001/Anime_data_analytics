@@ -16,7 +16,7 @@ BEGIN
             status,
             type,
             synopsis
-        FROM ANIME_DWH.STAGING.STG_ANIME
+        FROM ANIME_DB.STAGING.STG_ANIME
         WHERE anime_id IS NOT NULL
     ) s
     ON d.anime_id = s.anime_id
