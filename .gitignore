@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Config / secrets
+config/*.env
+config/*.yaml
+config/*.yml
+
+# dbt
+dbt/target/
+dbt/logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Power BI temp
+*.pbix.tmp
